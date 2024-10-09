@@ -12,7 +12,23 @@
     </bean>
 
     <bean id="dept" class="com.spring.appdemo.Department">
-        <property name="name" value="IT" />
+        <constructor-arg name="id" value="1"/>
+        <constructor-arg name="name" value="Developer"/>
+        <constructor-arg>
+            <list>
+                <ref bean="address1"/>
+                <ref bean="address2"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+
+    <bean id="address1" class="com.spring.appdemo.Addresses">
+        <property name="name" value="Cairo" />
+        <property name="id" value="1" />
+    </bean>
+    <bean id="address2" class="com.spring.appdemo.Addresses">
+        <property name="name" value="Giza" />
         <property name="id" value="1" />
     </bean>
 

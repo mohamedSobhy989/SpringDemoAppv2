@@ -1,0 +1,57 @@
+Dependency Injection..
+    --> There are 2 type of Dependency Injection
+        --> Setter Injection
+        --> Constructor argument Injection
+-----------------------------------------------------------------------------
+Setter Injection
+    <bean id="emp" class="com.spring.appdemo.Employee">
+        <property name="name" value="Mohammed" />
+        <property name="age" value="27" />
+    </bean>
+
+   ==> this example for setter injection if i need to inject property on class use property tag \
+       defined by name --> name of attribute -- name="age"
+       and set data by value -- value="27"
+---------------------------------------------------------------------------------------
+<property name="address">
+    <list>
+        <ref bean="address1"/>
+        <ref bean="address2"/>
+    </list>
+</property>
+===> to inject List use <list> tage inside <property> tag or </constructor-arg> tag
+===> value used with primitive data type
+===> ref --> used if the attribute is nun-primitive data type
+--------------------------------------------------------------------------------------
+Constructor argument Injection
+<bean id="dept" class="com.spring.appdemo.Department">
+        <constructor-arg name="id" value="1"/>
+        <constructor-arg name="name" value="Developer"/>
+        <constructor-arg>
+            <list>
+                <ref bean="address1"/>
+                <ref bean="address2"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+this example for Constructor injection if i need to inject attributes on class by constructor
+  use </constructor-arg> tag
+       defined by name --> name of attribute -- name="age"
+       and set data by value -- value="27" if primitive data type and ref if nun-primitive
+       and if constructor have list use
+        <constructor-arg>
+            <list>
+                <value> primitive data type </value>
+                <ref bean="address2"/>  - non primitive data type
+            </list>
+        </constructor-arg>
+------------------------------------------------------------------------------------------
+notes --
+    -- we prefer Setter Injection because
+        --> partial Injection --> if i have 5 attribute and i need to inject just 2
+            can't use constructor and use setter
+        --> setter injection override constructor injection
+            if i inject by two way setter in better
+        --> if i use just constructor and i need to remove one argument. must edit in
+            original class constructor

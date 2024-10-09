@@ -1,7 +1,12 @@
 package com.spring.appdemo;
 
-public class Employee {
 
+/*
+* this is test class used for learning injection
+* this class injected by application context on bean xml
+* using Getter and Setter Injection
+* */
+public class Employee {
 
     private String name ;
     private int age;

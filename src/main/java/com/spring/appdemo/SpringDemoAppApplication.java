@@ -12,12 +12,14 @@ public class SpringDemoAppApplication {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         Employee emp = (Employee) context.getBean("emp");
-        System.out.println("name is : " + emp.printName());
-        System.out.println("age is : " + emp.getAge());
-        System.out.println("salary is : " + emp.getSalary());
-        System.out.println("position is : " + emp.getPosition());
-        System.out.println("bean name is : " + emp.getName());
-        System.out.println("dept name is : " + emp.getDepartment().getName());
+        System.out.println( " name is : " + emp.printName() +
+                            " and age is : " + emp.getAge()+
+                            " and salary is : " + emp.getSalary() +
+                            " and position is : " + emp.getPosition() +
+                            " and bean name is : " + emp.getName() +
+                            " and dept name is : " + emp.getDepartment().getName() +
+                            " and address 1 is " + emp.getDepartment().getAddress().get(0).getName() +
+                            " and address 2 is " + emp.getDepartment().getAddress().get(1).getName());
         SpringApplication.run(SpringDemoAppApplication.class, args);
 
     }

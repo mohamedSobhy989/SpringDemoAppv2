@@ -1,0 +1,38 @@
+Dependency Injection..
+Spring Configuration Type
+    --> XML Based Configuration
+    --> Annotation Based Configuration
+    --> Java Based Configuration
+
+what is bean --> bean is an object that is instantiated, assembled and managed by
+                 Spring IOC container
+
+what is the type of bean scope?
+    ==> Singleton --> default of bean scope. container create one instance/object from this class
+                      and every once we call this object by the same name the same object
+                      will returned
+    ==> prototype --> container will return different bean/object with every request
+    ==> WEB Scope
+        ==> Request --> different bean/object for every HTTP request
+        ==> Session --> different bean/object for every HTTP session
+        ==> Global Session --> one bean/object for Global/all HTTP session
+
+what is Bean Life cycle?
+    --> initialization bean
+        --> when a bean is instantiate, it may be required to  perform some initialization
+            to get it into a usable state <init>
+        -->
+    --> destroy bean
+        --> when the bean is no longer required and is removed from the container
+            Some cleanup may be required <destroy>
+
+     --> if we need to perform init and destroy methods on class we implement two classes
+            (InitializingBean, DisposableBean) and override two methods (afterPropertiesSet, destroy)
+
+    --> but we can use it with injection with bean
+        --> by using property init-method="methodName", destroy-method="methodName"
+            --> methodName is a custom method declared on class
+
+    --> There are 2 type of Dependency Injection
+        --> Setter Injection
+        --> Constructor argument Injection
