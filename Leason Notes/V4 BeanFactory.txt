@@ -1,0 +1,53 @@
+             what and why spring ?
+Spring is one of the most popular Java EE frameworks.
+It is an open-source lightweight framework that allows Java EE developers to build simple,
+reliable, and scalable enterprise applications. It provides Aspect-oriented programming.
+It provides support for all generic and middleware services and mainly focuses on providing
+various ways to help you manage your business objects.
+It is a modularized framework where all the modules are designed on the concept called “Dependency Injection”.
+
+Dependency Injection: Dependency Injection is a design pattern that allows the spring container to
+‘inject’ objects into other objects or dependencies. In simple words,
+the control of creating objects and managing the spring components is taken care of by the Spring containers.
+--------------------------------------------------------------------------------------------------------------
+               what is the difference between jar,war and ear?
+jar ==> (java archive) java file with classes and resources like text ,images
+war ==> (web application resource) it's file that is used to distribute a collection of jar files,
+         jsp, servlet, xml, static web pages and other resources that constitute a web application
+ear ==> (Enterprise application server) java ee file that packs one or more modules \
+        into a single archive to deploy them on to an application server
+----------------------------------------------------------------------------
+    what is framework?
+-- ال framework يعتبر هي اساسيات الابليكيشن عشان مابداش من الاول في البرنامج بتاعي
+-- بتوفرلي سهوله في الكود وحاجات جاهزه كتير بجانب الكونفجراشن اللي هي مجهزاه
+-- هي بتخليني اركز علي ال business logic
+-- The Spring Framework provides a comprehensive programming and
+configuration model for modern Java-based enterprise applications
+----------------------------------------------------------------------------
+ Benefits of spring framework?
+ 1- POJO Based --> don't need application server to run. but you can use servlet container like tomcat
+ 2- Modular --> every part of spring can be used alone
+                (spring data, spring mvc, spring core, spring security, .......)
+ 3- Integration with existing framework like Hibernate, jsp, jsf
+ 4- Testability
+ 5- spring mvc
+ 6- central exception handling
+ 7- lightweight --> project size is small
+ 8- transaction based
+ ---------------------------------------------------------------------------
+
+            what is IOC (Inversion of Control)?
+ it's a design principle used to invert different kinds of controls in object oriented designed to
+ achieve loose coupling
+ control refer to any additional responsibility a class has, other than it's main responsibility
+
+            what is IOC Container?
+ is responsible to instantiate, configure and assemble the object. IOC get the information from XML File
+ main tasks of IOC Container:
+    - instantiate the application class
+    - Configure the object
+    - assemble the dependencies between the object
+
+            type of IOC Container?
+    - BeanFactory Container
+    - ApplicationContext Container

@@ -1,0 +1,27 @@
+what is the difference between BeanFactory and ApplicationContext?
+    - spring containers are responsible for creating bean objects and injecting them into the classes.
+    - the actual container that instantiates, configures, and manages a number of beans
+        = BeanFactory --> found on org.springframework.beans package.
+                      --> This is the root(Parent) interface for accessing a Spring bean container
+                      --> Catch XML File by implement XmlBeanFactory
+
+        = ApplicationContext --> found on org.springframework.context package
+                             --> This interface is designed on top of the BeanFactory interface
+                             --> inherit all functionality of BeanFactory and add some advances feature
+                                 like MessageSource, Access to resources, Event propagation to beans
+                             --> Catch XML File by implement
+                                        --> ClassPathXmlApplicationContext
+                                        --> FileSystemXmlApplicationContext
+                                        --> AnnotationConfigWebApplicationContext
+-------------------------------------------------------------------------------------
+What is Dependency Injection?
+    --> it is a design pattern used to implement (IOC) inversion of control
+    --> it allows the creation of dependent objects outside of the class and provide those object to the class
+        by different ways, this make
+        --> Ease to manage
+        --> testing the application
+        --> loose coupling
+    --> they are two way to perform dependency injection concept
+        --> Constructor injection
+        --> Getter and Setter injection
+            --> ex. <property name="position" value="java" /> &&  <property name="department" ref="dept" />
